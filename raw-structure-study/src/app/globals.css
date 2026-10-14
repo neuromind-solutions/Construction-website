@@ -1,0 +1,119 @@
+@import "../styles/tokens.css";
+@import "../styles/fonts.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: normal;
+  }
+}
+
+/* Background blueprint grid */
+.blueprint-bg {
+  background-image: url('/svgs/svg-1.svg');
+  background-repeat: repeat;
+  background-size: 1000px 1000px;
+}
+
+/* COMPOUND CTA BUTTON — Solid Orange Label + Separate Black Arrow Box */
+.cta-compound {
+  display: inline-flex;
+  align-items: stretch;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cta-compound:hover .cta-label {
+  background-color: var(--color-accent-hover);
+}
+
+.cta-compound:hover .cta-icon {
+  background-color: #1a1a18;
+}
+
+.cta-compound:hover .cta-icon svg {
+  transform: translate(2px, -2px);
+}
+
+.cta-label {
+  background-color: var(--color-accent-safety);
+  color: var(--color-bg-base);
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.cta-icon {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-medium);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.cta-icon svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* WIREFRAME / OUTLINE CTA BUTTON */
+.cta-outline {
+  display: inline-flex;
+  align-items: stretch;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cta-outline .cta-label {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-medium);
+  border-right: none;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.cta-outline .cta-icon {
+  background-color: transparent;
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-medium);
+}
+
+.cta-outline:hover .cta-label {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: var(--color-text-primary);
+}
+
+.cta-outline:hover .cta-icon {
+  border-color: var(--color-text-primary);
+}
+
+.cta-outline:hover .cta-icon svg {
+  transform: translate(2px, -2px);
+}

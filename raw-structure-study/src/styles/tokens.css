@@ -1,0 +1,30 @@
+:root {
+  /* Surfaces & Backgrounds */
+  --color-bg-base: #0e0e0d;
+  --color-bg-surface: #1c1c1a;
+  --color-bg-elevated: #262623;
+
+  /* Text & Readability */
+  --color-text-primary: #f6f4f0;
+  --color-text-secondary: #e7e3dc;
+  --color-text-muted: #8c877f;
+  --color-text-disabled: #54514c;
+
+  /* Accents & Signals */
+  --color-accent-safety: #ff4d00;
+  --color-accent-hover: #e04400;
+
+  /* Borders & Architectural Grids */
+  --color-border-subtle: rgba(231, 227, 220, 0.14);
+  --color-border-medium: rgba(231, 227, 220, 0.28);
+  --color-border-strong: #e7e3dc;
+
+  /* Selection */
+  --color-selection-bg: #ff4d00;
+  --color-selection-text: #0e0e0d;
+}
+
+::selection {
+  background-color: var(--color-selection-bg);
+  color: var(--color-selection-text);
+}
